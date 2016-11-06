@@ -1,8 +1,12 @@
 import React from 'react';
+import SearchBar from './search-bar';
+
+// Require Styling
+require('../../scss/style.scss');
 
 const App = () => {
   return (
-    <h1>Everything is Working Kine</h1>
+    <SearchBar />
   );
 }
 
