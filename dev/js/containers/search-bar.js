@@ -1,4 +1,7 @@
 import React, { Component } from 'react';
+import { bindActionCreators } from 'redux';
+import { connect } from 'react-redux';
+import { searchUsername } from '../actions/index';
 
 class SearchBar extends Component {
 
@@ -15,6 +18,10 @@ class SearchBar extends Component {
   onUsernameSearch(event) {
     event.preventDefault();
 
+    this.props.searchUsername(this.state.username);
+
+    // clear username from input
+    this.setState({username: ''});
   }
 
   render() {
@@ -32,4 +39,10 @@ class SearchBar extends Component {
   }
 }
 
-export default SearchBar;
+function mapDispatchToProps(dispatch) {
+  return bindActionCreators({
+    searchUsername
+  }, dispatch);
+}
+
+export default connect(null, mapDispatchToProps)(SearchBar);

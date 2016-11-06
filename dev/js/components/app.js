@@ -1,5 +1,5 @@
 import React from 'react';
-import SearchBar from './search-bar';
+import SearchBar from '../containers/search-bar';
 
 // Require Styling
 require('../../scss/style.scss');
