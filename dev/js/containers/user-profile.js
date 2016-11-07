@@ -9,11 +9,10 @@ class UserProfile extends Component {
     }
 
     // get reference to github data through props
-    this.data = this.props.userData.data;
+    this.data = this.props.userData.userProfile.data;
 
     return (
       <div className='card'>
-        <h4 className='card-header text-xs-center'>User Profile</h4>
         <img className='card-img-top prof-pic' src={ this.data.avatar_url } alt='github user profile image' />
         <ul className='list-group list-group-flush'>
           <li className='list-group-item'>Name: { this.data.name }</li>

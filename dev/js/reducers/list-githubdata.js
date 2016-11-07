@@ -4,7 +4,7 @@ export default function(state = null, action) {
   switch(action.type) {
 
     case SEARCH_USERNAME:
-      return action.payload;
+      return {'userProfile': action.payload[0], 'userRepos': action.payload[1]};
     break
 
     default:
