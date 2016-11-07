@@ -2,6 +2,7 @@ import React from 'react';
 import SearchBar from '../containers/search-bar';
 import UserProfile from '../containers/user-profile';
 import UserRepos from '../containers/user-repos';
+import UserNotes from '../containers/user-notes';
 
 require('../../scss/style.scss');
 
@@ -19,6 +20,11 @@ const App = () => {
           <div className='col-md-4'>
             <h4>User Repos</h4>
             <UserRepos />
+          </div>
+
+          <div className='col-md-4'>
+            <h4>Notes for jonathan</h4>
+            <UserNotes />
           </div>
         </div>
       </div>

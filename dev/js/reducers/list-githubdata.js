@@ -1,6 +1,6 @@
-import { SEARCH_USERNAME } from '../actions/index';
+import { SEARCH_USERNAME, ADD_NOTE } from '../actions/index';
 
-export default function(state = null, action) {
+export function userDataReducer(state = null, action) {
   switch(action.type) {
 
     case SEARCH_USERNAME:
@@ -10,5 +10,18 @@ export default function(state = null, action) {
     default:
       return state;
     break
+  }
+}
+
+export function userNotesReducer(state = null, action) {
+  switch(action.type) {
+
+    case ADD_NOTE:
+      return !state ? [action.payload] : [action.payload, ...state];
+    break
+
+    default:
+      return state;
+    break;
   }
 }

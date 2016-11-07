@@ -1,8 +1,9 @@
 import { combineReducers } from 'redux';
-import GithubUsernameData from './list-githubdata';
+import { userDataReducer, userNotesReducer } from './list-githubdata';
 
 const combinedReducers = combineReducers({
-  githubData: GithubUsernameData
+  githubData: userDataReducer,
+  userNotes: userNotesReducer
 });
 
 export default combinedReducers;

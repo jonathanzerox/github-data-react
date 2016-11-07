@@ -1,6 +1,7 @@
 import axios from 'axios';
 
 export const SEARCH_USERNAME = 'SEARCH_USERNAME';
+export const ADD_NOTE = 'ADD_NOTE';
 
 function getUserProfile(url) {
     return axios.get(url);
@@ -21,4 +22,11 @@ export function searchUsername(username) {
       type: SEARCH_USERNAME,
       payload: request
     }
+}
+
+export function addNotes(note) {
+  return {
+    type: ADD_NOTE,
+    payload: note
+  }
 }
