@@ -8,10 +8,7 @@ class SearchBar extends Component {
   constructor(props) {
     super(props);
 
-    this.state = {
-      username: ''
-    }
-
+    this.state = { username: '' }
     this.onUsernameSearch = this.onUsernameSearch.bind(this);
   }
 
@@ -19,8 +16,6 @@ class SearchBar extends Component {
     event.preventDefault();
 
     this.props.searchUsername(this.state.username);
-
-    // clear username from input
     this.setState({username: ''});
   }
 

@@ -4,7 +4,7 @@ export default function(state = null, action) {
   switch(action.type) {
 
     case SEARCH_USERNAME:
-      console.log(action.payload);
+      return action.payload;
     break
 
     default:
